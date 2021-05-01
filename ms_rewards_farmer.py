@@ -39,6 +39,7 @@ def browserSetup(headless_mode: bool = False, user_agent: str = PC_USER_AGENT) -
     options.add_argument("user-agent=" + user_agent)
     options.add_argument('lang=' + LANG.split("-")[0])
     if headless_mode :
+        prNoColor("[BROWSER] Headless Mode: Enabled")
         options.add_argument("--headless")
     options.add_argument('log-level=3')
     chrome_browser_obj = webdriver.Chrome(options=options)
