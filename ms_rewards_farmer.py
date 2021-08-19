@@ -778,7 +778,8 @@ for account in ACCOUNTS:
     prGreen('[LOGIN] Logged-in successfully !')
     startingPoints = POINTS_COUNTER
     prGreen('[POINTS] You have ' + str(POINTS_COUNTER) + ' points on your account !')
-    browser.get('https://account.microsoft.com/rewards/')
+    browser.get('https://rewards.microsoft.com/Signin')
+    time.sleep(2)
     prNoColor('[DAILY SET] Trying to complete the Daily Set...')
     completeDailySet(browser)
     prGreen('[DAILY SET] Completed the Daily Set successfully !')
